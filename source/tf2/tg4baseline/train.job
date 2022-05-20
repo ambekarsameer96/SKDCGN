@@ -1,0 +1,18 @@
+#!/bin/bash
+
+#SBATCH --partition=gpu_shared_course
+#SBATCH --gres=gpu:1
+#SBATCH --job-name=CGN
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=3
+#SBATCH --time=48:00:00
+#SBATCH --mem=64000M
+#SBATCH --output=gen.out
+
+module load 2020
+module load 2021
+module load CUDAcore/11.0.2
+module load cuDNN/8.2.1.32-CUDA-11.3.1
+
+python misc/extract_big.py
+bash train.sh

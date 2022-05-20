@@ -5,7 +5,7 @@ from PIL import Image
 from tqdm import tqdm
 import os
 
-module = hub.Module('https://tfhub.dev/deepmind/biggan-deep-128/1')
+module = hub.Module('https://tfhub.dev/deepmind/biggan-deep-256/1')
 
 # Sample random noise (z) and ImageNet label (y) inputs.
 batch_size = 64
