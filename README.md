@@ -23,7 +23,7 @@ conda activate cgn
 
 ## Training TinyGAN for 1000 classes
 ```bash
-$ bash train.sh
+$ bash Baseline_code/TinyGAN_updated_1000_classes/train.sh
 ```
 
 ## Training the Baseline
@@ -32,7 +32,7 @@ NOTE: Training the Baseline for ImageNet utilises TinyGAN and U2-Net weights. It
 """
 ```bash
 
-python imagenet/train_cgn.py --model_name MODEL_NAME
+python Baseline_code/Baseline/code/counterfactual_generative_networks-main/imagenet/train_cgn.py --model_name MODEL_NAME
 ```
 
 """## Generate Counterfactual Images
@@ -41,9 +41,9 @@ python imagenet/train_cgn.py --model_name MODEL_NAME
 """
 ```bash
 
-python imagenet/generate_data.py --n_data 5000 --weights_path imagenet/weights/cgn.pth --mode random --run_name val --truncation 0.5 --batch_sz 1
+python Baseline_code/Baseline/code/counterfactual_generative_networks-main/imagenet/generate_data.py --n_data 5000 --weights_path imagenet/weights/cgn.pth --mode random --run_name val --truncation 0.5 --batch_sz 1
 
-python imagenet/generate_data.py --n_data 2000 --weights_path imagenet/weights/cgn.pth --mode random --run_name test --truncation 0.5 --batch_sz 1
+python Baseline_code/Baseline/code/counterfactual_generative_networks-main/imagenet/generate_data.py --n_data 2000 --weights_path imagenet/weights/cgn.pth --mode random --run_name test --truncation 0.5 --batch_sz 1
 ```
 
 
