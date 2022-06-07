@@ -35,10 +35,11 @@ NOTE: Training the Baseline for ImageNet utilises TinyGAN and U2-Net weights. It
 python Baseline_code/Baseline/code/counterfactual_generative_networks-main/imagenet/train_cgn.py --model_name MODEL_NAME
 ```
 
-"""## Generate Counterfactual Images
+"""
+## Generate Counterfactual Images
 
 2 Folders of counterfactual images are needed (Val, Test). Val has 5,000 counterfactuals, Test has 2000 counterfactual images. 
-"""
+
 ```bash
 
 python Baseline_code/Baseline/code/counterfactual_generative_networks-main/imagenet/generate_data.py --n_data 5000 --weights_path imagenet/weights/cgn.pth --mode random --run_name val --truncation 0.5 --batch_sz 1
