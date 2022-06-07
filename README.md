@@ -29,7 +29,7 @@ $ bash Baseline_code/TinyGAN_updated_1000_classes/train.sh
 ## Training the Baseline
 
 NOTE: Training the Baseline for ImageNet utilises TinyGAN and U2-Net weights. It runs for 1.2m iterations(approx 0.5/s). Prefer to skip this part if adequate resource not available.
-"""
+
 ```bash
 
 python Baseline_code/Baseline/code/counterfactual_generative_networks-main/imagenet/train_cgn.py --model_name MODEL_NAME
