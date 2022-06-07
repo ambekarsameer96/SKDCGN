@@ -19,14 +19,25 @@ conda env create -f environment.yml
 conda activate cgn
 ```
 
-### Baseline ###
+## SKDCGN ##
 
-## Training TinyGAN for 1000 classes
+
+### Training the SKDCGN
+
+
+
+## MNIST Experiments ###
+
+
+
+## Baseline ###
+
+### Training TinyGAN for 1000 classes
 ```bash
 $ bash Baseline_code/TinyGAN_updated_1000_classes/train.sh
 ```
 
-## Training the Baseline
+### Training the Baseline
 
 NOTE: Training the Baseline for ImageNet utilises TinyGAN and U2-Net weights. It runs for 1.2m iterations(approx 0.5/s). Prefer to skip this part if adequate resource not available.
 
@@ -36,9 +47,9 @@ python Baseline_code/Baseline/code/counterfactual_generative_networks-main/image
 ```
 
 """
-## Generate Counterfactual Images
+### Generate Counterfactual Images
 
-2 Folders of counterfactual images are needed (Val, Test). Val has 5,000 counterfactuals, Test has 2000 counterfactual images. 
+2 Folders of counterfactual images are required (Val, Test). Val has 5,000 counterfactuals, Test has 2000 counterfactual images. 
 
 ```bash
 
