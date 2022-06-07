@@ -1,0 +1,21 @@
+WARNING:tensorflow:From /home/lcur1321/.conda/envs/tiny/lib/python3.9/site-packages/tensorflow_gan/python/estimator/tpu_gan_estimator.py:42: The name tf.estimator.tpu.TPUEstimator is deprecated. Please use tf.compat.v1.estimator.tpu.TPUEstimator instead.
+
+2022-05-17 17:27:42.812254: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-05-17 17:27:42.825418: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcusolver.so.11'; dlerror: libcusolver.so.11: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /sw/arch/Debian10/EB_production/2020/software/CUDAcore/11.0.2/nvvm/lib64:/sw/arch/Debian10/EB_production/2020/software/CUDAcore/11.0.2/extras/CUPTI/lib64:/sw/arch/Debian10/EB_production/2020/software/CUDAcore/11.0.2/lib64
+2022-05-17 17:27:42.827022: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudnn.so.8'; dlerror: libcudnn.so.8: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /sw/arch/Debian10/EB_production/2020/software/CUDAcore/11.0.2/nvvm/lib64:/sw/arch/Debian10/EB_production/2020/software/CUDAcore/11.0.2/extras/CUPTI/lib64:/sw/arch/Debian10/EB_production/2020/software/CUDAcore/11.0.2/lib64
+2022-05-17 17:27:42.827051: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1850] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+Namespace(z_dim=128, c_dim=128, image_size=256, g_conv_dim=32, d_conv_dim=32, g_repeat_num=5, d_repeat_num=5, lambda_gan=0.01, batch_size=32, num_epoch=30, lr_decay_start=300000, g_lr=0.0002, d_lr=0.0002, n_critic=5, beta1=0.0, beta2=0.9, resume_epoch=0, use_vgg=True, test_epoch=30, use_numpy_fid=True, num_workers=4, mode='train', use_tensorboard=False, real_dir='/hdd2/tera/train_128', image_dir='data1K_1/ims', z_path='data1K_1/all_noises.npy', label_path='data1K_1/all_labels.npy', save_dir='gan', real_fid_stat_dir='Get_ImageNet_FID', real_incep_stat_dir='/hdd2/tera/stat_real', log_step=500, sample_step=1, model_save_step=10, log_dir='gan/logs', model_save_dir='gan/models', sample_dir='gan/samples', result_dir='gan/results')
+Traceback (most recent call last):
+  File "/home/lcur1321/TinyGan/main.py", line 131, in <module>
+    main(config)
+  File "/home/lcur1321/TinyGan/main.py", line 26, in main
+    train_loader = get_loader(config.image_dir, config.z_path, config.label_path, 
+  File "/home/lcur1321/TinyGan/data_loader.py", line 166, in get_loader
+    dataset = My_Dataset(image_dir, z_path, label_path, mode, transform=transform)
+  File "/home/lcur1321/TinyGan/data_loader.py", line 19, in __init__
+    self.preprocess()
+  File "/home/lcur1321/TinyGan/data_loader.py", line 37, in preprocess
+    self.dataset.append([os.path.join(img_dir, fn), noises[idx], labels[idx]])
+IndexError: only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices

@@ -1,0 +1,10 @@
+images in 3 folders c- 3 Ims of mnist -ready 
+npy files 
+-- > give these images as inpit to our architecture 
+see the results 
+
+
+
+Add tensorboard, some coding related stuff
+modify things, add cross entropy , SSIM, impprove KD and get better outputs to show novelty since we cant show  novelty in imagenet datsaet 
+Advantage: ,nist is very quick than imagenet. 

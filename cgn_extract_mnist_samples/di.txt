@@ -1,0 +1,8 @@
+# modify the paramters such that you obtain different kind of counterfatcuals 
+for example : to begin with give less importance to say shape and now generate counterfactuals 
+after that, generate counterfatcuals and train invariant classifier and check the accuracy what you get. 
+Outputs that we need: the counterfatcual images that are generated after step 1 , classification accuracy on test set give by the python file 
+
+
+
+4-5 experiments. 
