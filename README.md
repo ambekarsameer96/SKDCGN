@@ -37,7 +37,7 @@ python Baseline_code/Baseline/code/counterfactual_generative_networks-main/image
 
 """## Generate Counterfactual Images
 
-2 Folders of counterfactual images are needed(Train, Val). Train has 35,000 counterfactuals, Val has 5000 counterfactual images. We split it to provided 1:1 ratio that is recommended in the paper(Imagenet-1k is replaced with Imagenet-1k(mini))
+2 Folders of counterfactual images are needed (Val, Test). Val has 5,000 counterfactuals, Test has 2000 counterfactual images. 
 """
 ```bash
 
