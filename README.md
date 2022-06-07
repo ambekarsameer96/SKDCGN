@@ -29,7 +29,7 @@ conda activate 'environment name'
 ## MNIST Experiments ###
 For MNIST, first use pretrained weights from the authors repo that has been forked from the 'CGN' paper. 
 Go to folder - ./cgn_extract_mnist_samples
-```
+```bash
 python generate_data.py
 
 ```
@@ -39,7 +39,7 @@ Use the same folder as the input to SKDCGN.
 
 Now Navigate to folder : SKDCGN_MNIST
 Run following commands to run for every IM, it will use existing losses + KL_Divergence as loss function integrated in models.py
-```
+```bash
 python main_bg_exp.py
 
 python main_fg_exp.py
@@ -78,6 +78,26 @@ python Baseline_code/Baseline/code/counterfactual_generative_networks-main/image
 python Baseline_code/Baseline/code/counterfactual_generative_networks-main/imagenet/generate_data.py --n_data 2000 --weights_path imagenet/weights/cgn.pth --mode random --run_name test --truncation 0.5 --batch_sz 1
 ```
 
+## Shape IM experiments ##
+# Run following command with desired modifications in the training loop
+```bash
+python train_cgn_Shape_IM.py
+```
+
+# Generate datasets and train classifier. Final classifier results will be in resulting SLURM file.
+```bash
+python generate_data.py --dataset 'double_colored_MNIST'
+python generate_data.py --file_name 'train_noise' --dataset 'double_colored_MNIST' --weight_path 'mnists/experiments/cgn_double_colored_MNIST_2022_06_02_14_31_20_tmp_noise01/weights/ckp_46000.pth'
+python train_classifier.py --dataset "double_colored_MNIST_counterfactual"
+```
+
+# Repeat process with remaining modifications (don't forget to retrain network with the respective modifications!)
+```bash
+python generate_data.py --file_name 'train_transparent' --dataset 'double_colored_MNIST' --weight_path 'mnists/experiments/cgn_double_colored_MNIST_2022_06_01_10_24_42_tmp_transparent75/weights/ckp_46000.pth'
+```
+```
+python generate_data.py --file_name 'train_rotation' --dataset 'double_colored_MNIST' --weight_path 'mnists/experiments/cgn_double_colored_MNIST_2022_06_03_09_56_27_tmp_rotation180deg/weights/ckp_46000.pth'
+```
 
 ## Acknowledgments ##
 We like to acknowledge several repos of which we use parts of code, data, or models in our implementation:
