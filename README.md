@@ -1,4 +1,4 @@
-# SKDCGN- Source-free Knowledge Distillation of Counterfactual Generative Networks using cGANs#
+# SKDCGN- Source-free Knowledge Distillation of Counterfactual Generative Networks using cGANs
 
 
 
