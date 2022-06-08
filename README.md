@@ -1,6 +1,6 @@
 # SKDCGN- Source-free Knowledge Distillation of Counterfactual Generative Networks using cGANs
 
-
+Note: To run the experiments, saved models are required. As the size of the models are quite large, we have not provided them over here. The links for the models to download can be provided on demand.
 
 ## Setup ##
 Install anaconda (if you don't have it yet)
