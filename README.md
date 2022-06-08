@@ -24,6 +24,17 @@ conda activate cgn
 ### Training the SKDCGN
 
 
+## Imagenet Experiments ###
+
+For imagenet, it is necessary to generate the data to train the TinyGAN.
+
+```bash
+python cgn_extract_imagenet_samples/generate_data.py
+```
+
+These images then need to be moved into the SKDCGN_Imagenet directory.
+
+Then, run the train.sh script in the SKDCGN_Imagenet directory.
 
 ## MNIST Experiments ###
 For MNIST, first use pretrained weights from the authors repo that has been forked from the 'CGN' paper. 
