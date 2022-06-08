@@ -29,7 +29,7 @@ conda activate cgn
 For MNIST, first use pretrained weights from the authors repo that has been forked from the 'CGN' paper. 
 Go to folder - ./cgn_extract_mnist_samples
 ```bash
-python generate_data.py
+python cgn_extract_mnist_samples/generate_data.py
 
 ```
 The images for every IM, noise, labels will be saved in a directory Imgs_CF, which can be converted into a numpy array using converter.ipynb 
