@@ -14,9 +14,8 @@ Clone the repo and build the environment
 
 ```Shell
 git clone https://github.com/ambekarsameer96/DL2.git
-cd (if the environment file is in main, not inside any folder, remove this line)
-conda env create -f environment.yml
-conda activate 'environment name'
+conda env create -f env.yml
+conda activate cgn
 ```
 
 ## SKDCGN ##
