@@ -80,15 +80,16 @@ python cgn_extract_mnist_samples/train_cgn_Shape_IM.py
 ### Generate datasets and train classifier. Final classifier results will be in resulting SLURM file.
 ```bash
 python cgn_extract_mnist_samples/generate_data.py --dataset 'double_colored_MNIST'
+
 python cgn_extract_mnist_samples/generate_data.py --file_name 'train_noise' --dataset 'double_colored_MNIST' --weight_path 'mnists/experiments/cgn_double_colored_MNIST_2022_06_02_14_31_20_tmp_noise01/weights/ckp_46000.pth'
+
 python cgn_extract_mnist_samples/train_classifier.py --dataset "double_colored_MNIST_counterfactual"
 ```
 
 ### Repeat process with remaining modifications (don't forget to retrain network with the respective modifications!)
 ```bash
 python cgn_extract_mnist_samples/generate_data.py --file_name 'train_transparent' --dataset 'double_colored_MNIST' --weight_path 'mnists/experiments/cgn_double_colored_MNIST_2022_06_01_10_24_42_tmp_transparent75/weights/ckp_46000.pth'
-```
-```
+
 python cgn_extract_mnist_samples/generate_data.py --file_name 'train_rotation' --dataset 'double_colored_MNIST' --weight_path 'mnists/experiments/cgn_double_colored_MNIST_2022_06_03_09_56_27_tmp_rotation180deg/weights/ckp_46000.pth'
 ```
 
