@@ -27,28 +27,22 @@ conda activate cgn
 
 ## MNIST Experiments ###
 For MNIST, first use pretrained weights from the authors repo that has been forked from the 'CGN' paper. 
-Go to folder - ./cgn_extract_mnist_samples
+
 ```bash
 python cgn_extract_mnist_samples/generate_data.py
 
 ```
 The images for every IM, noise, labels will be saved in a directory Imgs_CF, which can be converted into a numpy array using converter.ipynb 
 
-Use the same folder as the input to SKDCGN. 
-
-Now Navigate to folder : SKDCGN_MNIST
 Run following commands to run for every IM, it will use existing losses + KL_Divergence as loss function integrated in models.py
 ```bash
-python main_bg_exp.py
+python SKDCGN_MNIST/main_bg_exp.py
 
-python main_fg_exp.py
+python SKDCGN_MNIST/main_fg_exp.py
 
-python main_mask_exp.py
+python SKDCGN_MNIST/main_mask_exp.py
 
 ```
-
-
-
 
 ## Baseline ###
 
